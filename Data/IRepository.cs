@@ -16,6 +16,6 @@ namespace MongoApi.Data {
 
         Task<bool> Remover<TEntidade> (Expression<Func<TEntidade, bool>> filtro) where TEntidade : Entity;
 
-        Task<bool> Remover<TEntidade> (string id) where TEntidade : Entity, new ();
+        Task<bool> RemoverId<TEntidade> (string id) where TEntidade : Entity;
     }
 }
